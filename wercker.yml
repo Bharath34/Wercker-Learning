@@ -16,7 +16,9 @@
            apt-get update
            apt-get install -y curl
 # note the indentation, this is still part of the build pipeline
-   
+   after-steps:
+   push-2-docker:
+   box: nginx:latest
    
    steps:
      - script:
